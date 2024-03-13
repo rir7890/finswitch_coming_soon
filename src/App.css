@@ -1,38 +1,137 @@
-.App {
+*{
+  margin: 0px;
+  padding: 0px;
+}
+
+/* backround image css */
+.container {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Adjust height as needed */
+    background-image: url('./images/Rectangle\ 475.png'); /* Replace 'your-background-image.jpg' with your image file */
+    background-size:cover;
+    background-position: center;
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.5); /* Dark shadow effect */
+    z-index:-100;
+  }
+
+/* image css part */
+  header {
+    position: fixed;
+    top: 66px;
+    left: 70px;
+    width: 223px;
+    height: 47px;
+    padding: 20px;
+    z-index: 9999; /* Ensure the header is on top of other elements */
+  }
+  .logo img {
+    width: 100%; /* Adjust the width of the logo */
+    height: auto; /* Maintain aspect ratio */
+  }
+
+  /* the way of alternative content style */
+  .content{
+    color:white;
+    position: fixed;
+    top:500px;
+    left:180px;
+    width: 502px;
+    height: 100px;
+    border-left: 4px solid white;
+    border-width: 8px;
+    padding-left:60px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 35px;
+  }
+
+  /* contact information design */
+  .contact-info{
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: medium;
+    color: white;
+    font-size: 22px;
+    position: fixed;
+    bottom:150px;
+    left:150px;
+    width: 320px;
+    height: 35px;
+  }
+
+  /* laptop image background style */
+.laptop-image{
+  width: 560px;
+  height: 330px;
+  position: fixed;
+  top:560px;
+  right: 560px;
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
   color: white;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: medium;
+  font-size: 28px;
 }
 
-.App-link {
-  color: #61dafb;
+.laptop-image img{
+  width: 100%;
+  height: 100%;
+  display: block;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.laptop-image p{
+   position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    background-color: transparent ; /* Semi-transparent background for better readability */
+    padding:90px  155px 120px 155px ;
+    backdrop-filter: blur(5px);
 }
+
+/* 9X9 div in chess board tilte  */
+.container-row{
+  display:block;
+  position:relative;
+  right: 10px;
+  z-index:-120;
+  /* border: 4px solid black; */
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.container-box{
+  height:1200px;
+  width:1200px;
+  border:0px solid transparent;
+  display:grid;
+  grid-template-columns:repeat(3,400px);
+  grid-template-rows:repeat(3,400px);
+  transform:rotate(45deg);
+  position:absolute;
+  right:-35px;
+  top:-35px;
+/*   border:2px solid black; */
+}
+.box{
+  height:400px;
+  width:400px;
+  border:0 transparent;
+}
+
+.box1,.box3,.box5,.box7,.box9{
+background-color:#B06806;
+}
+.box2,.box4,.box6,.box8{
+  background-color:rgba(221, 221, 221, 0.1);
+}
+
+
+
+
